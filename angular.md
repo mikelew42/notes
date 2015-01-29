@@ -2,11 +2,8 @@ When I learned Angular about a year ago, the documentation was terrible.  You ne
 
 Table of Contents
 - The building blocks:  *modules*, *directives*, *controllers*, *services*, *views*, and *filters*.
-- *Dependency Injection*
-- Controllers
-- 
-
-The main building blocks are *modules*, *directives*, *controllers*, *services* and *views*.
+- Demystifying *Dependency Injection*
+- Controllers have *$scope*
 
 # Dependency Injection
 
