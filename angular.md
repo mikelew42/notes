@@ -1,10 +1,10 @@
 When I learned Angular about a year ago, the documentation was terrible.  You need to understand an overview of all the building blocks of an Angular app, before trying to wrap your head around the syntax.
 
 ### The Building Blocks
-- *module*s are containers for the rest:
-  - *directive*s
-  - *controller*s
-  - *service*s, *provider*s, and *factory*s
+- *modules* are containers for the rest:
+  - *directives*
+  - *controllers*
+  - *services*, *providers*, and *factories*
   - *views*
   - *filters*
 
