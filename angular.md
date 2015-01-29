@@ -1,6 +1,6 @@
 When I learned Angular about a year ago, the documentation was terrible.  You need to understand an overview of all the building blocks of an Angular app, before trying to wrap your head around the syntax.
 
-### The Building Blocks
+#### The Building Blocks
 - *modules* are containers for the rest:
   - *directives*
   - *controllers*
@@ -8,7 +8,7 @@ When I learned Angular about a year ago, the documentation was terrible.  You ne
   - *views*
   - *filters*
 
-### and some important concepts
+#### and some important concepts
 - Demystifying *Dependency Injection*
 - Controllers have *$scope*
 
@@ -38,11 +38,11 @@ For example:
 var myModule = angular.module('myModule', ['myOtherModule', 'ChatRoomModule']);
 ```
 
-This essentially just adds the building blocks from those modules onto your new module.  This is called `dependency injection`, and is a frequent pattern in Angular.  When injecting services into your controllers, however, there's an added step.
+This essentially just adds the building blocks from those modules onto your new module.  This is called `dependency injection`, and is a frequent pattern in Angular.  
 
 ### Dependency Injection
 
-The example from [the guide](https://docs.angularjs.org/guide/di):
+To include building blocks in other building blocks, you use "dependency injection".  You'll see this pattern (from [the guide](https://docs.angularjs.org/guide/di)) frequently:
 
 ```
 someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope, dep1, dep2) {
@@ -54,8 +54,8 @@ someModule.controller('MyController', ['$scope', 'dep1', 'dep2', function($scope
 }]);
 ```
 
-You're defining a new controller and specifying several dependencies that are "injected" into the function that defines the controller.  Now let's talk about
+You're defining a new controller and specifying several dependencies that are "injected" into the function that defines the controller.  Usually you'll inject dependencies that are defined by Angular, but you can also find third party plugins (modules) that provide dependencies you can inject, or create your own.  Now let's talk about
 
 ## Controllers and $scope
 
-Controllers contain the functionality 
+Controllers are basically just JavaScript objects that are attached to certain DOM elements.  The way this works is a little tricky, because its largely dependent on views.  And, the view system kinda sucks, because you can only have 1 view container, and you can't nest them.
